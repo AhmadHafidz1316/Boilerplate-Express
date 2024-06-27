@@ -35,6 +35,10 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.use(router);
 
+app.get("/", (req,res) => {
+    res.send("Hai")
+})
+
 app.listen(PORT, () => {
     console.log(`Server berjalan di http://localhost:${PORT}`);
 });
